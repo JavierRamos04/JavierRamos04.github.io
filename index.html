@@ -12,7 +12,7 @@
       name="keywords"
       content="desarrollo web, landing pages, diseño web, portfolio, frontend developer"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css" /> 
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -24,7 +24,7 @@
     ></script>
     <script type="text/javascript">
       (function () {
-        emailjs.init("YOUR_PUBLIC_KEY"); // Reemplaza con tu Public Key de EmailJS
+        emailjs.init("YOUR_PUBLIC_KEY");
       })();
     </script>
   </head>
@@ -105,112 +105,219 @@
       </div>
     </section>
 
-    <!-- About Section -->
-    <section class="about reveal" id="sobre-mi">
-      <div class="about-grid">
-        <div class="about-content">
-          <h2>Sobre <span>Mí</span></h2>
-          <p class="lead-text">
-            Ingeniero en Sistemas Computacionales con una pasión desmedida por
-            el desarrollo web y la creación de experiencias digitales que
-            <strong>importan</strong>.
-          </p>
-          <p>
-            No me conformo con "bonito". Cada proyecto es una oportunidad para
-            crear algo memorable, funcional y orientado a resultados. Combino
-            diseño audaz con código estructurado para entregar productos que no
-            solo se ven bien, sino que <em>funcionan perfectamente</em>.
-          </p>
-          <p>
-            Mi proceso: <strong>Escuchar</strong> → <strong>Diseñar</strong> →
-            <strong>Desarrollar</strong> → <strong>Optimizar</strong>. Simple,
-            pero efectivo. Cada línea de código tiene un propósito, cada
-            elemento visual cuenta una historia.
-          </p>
-          <div class="expertise-tags">
-            <span class="expertise-tag">Clean Code</span>
-            <span class="expertise-tag">UX/UI Focus</span>
-            <span class="expertise-tag">Performance First</span>
-            <span class="expertise-tag">Mobile Responsive</span>
-          </div>
-          <div class="about-stats">
-            <div class="stat-card">
-              <div class="stat-number">15+</div>
-              <div class="stat-label">Proyectos Completados</div>
-            </div>
-            <div class="stat-card">
-              <div class="stat-number">100%</div>
-              <div class="stat-label">Código Limpio y Estructurado</div>
-            </div>
-            <div class="stat-card">
-              <div class="stat-number">24h</div>
-              <div class="stat-label">Respuesta Garantizada</div>
-            </div>
-            <div class="stat-card">
-              <div class="stat-number">∞</div>
-              <div class="stat-label">Creatividad Sin Límites</div>
-            </div>
-          </div>
+    <!-- About Section - NUEVO DISEÑO PREMIUM -->
+    <section class="about-premium reveal" id="sobre-mi">
+      <div class="about-premium-container">
+        <!-- Background Effects -->
+        <div class="about-bg-effects">
+          <div class="bg-gradient-orb orb-pink"></div>
+          <div class="bg-gradient-orb orb-blue"></div>
+          <div class="bg-grid"></div>
         </div>
-        <div class="about-visual">
-          <div class="code-preview">
-            <div class="code-header">
-              <div class="code-dots">
-                <div class="code-dot"></div>
-                <div class="code-dot"></div>
-                <div class="code-dot"></div>
+
+        <!-- Section Header -->
+        <div class="about-header">
+          <div class="section-label">
+            <span class="label-number">01</span>
+            <span class="label-text">SOBRE MÍ</span>
+          </div>
+          <h2 class="about-title">
+            Creando Experiencias<br />
+            <span class="title-gradient">Digitales Memorables</span>
+          </h2>
+        </div>
+
+        <!-- Content Grid -->
+        <div class="about-content-grid">
+          <!-- Left: Info Cards -->
+          <div class="about-info-section">
+            <!-- Profile Card -->
+            <div class="profile-card glass-card">
+              <div class="profile-image-container">
+                <div class="profile-image-wrapper">
+                  <img
+                    src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=400&fit=crop"
+                    alt="Workspace"
+                    class="profile-image"
+                  />
+                  <div class="profile-status">
+                    <span class="status-dot"></span>
+                    <span class="status-text">Disponible</span>
+                  </div>
+                </div>
+                <div class="profile-rings">
+                  <div class="ring ring-1"></div>
+                  <div class="ring ring-2"></div>
+                </div>
               </div>
-              <div class="code-title">developer.js</div>
+              <div class="profile-info">
+                <h3 class="profile-name">Carlos Javier Ramos</h3>
+                <p class="profile-role">Full Stack Developer</p>
+                <div class="profile-location">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span>San Cristóbal, Chiapas, MX</span>
+                </div>
+              </div>
             </div>
-            <div class="code-content">
-              <div class="code-line">
-                <span class="code-keyword">const</span>
-                <span class="code-function">developer</span> = {
+
+            <!-- Stats Grid -->
+            <div class="stats-grid-premium">
+              <div class="stat-card-premium">
+                <div class="stat-icon">
+                  <i class="fas fa-rocket"></i>
+                </div>
+                <div class="stat-content">
+                  <div class="stat-number-premium" data-target="15">0</div>
+                  <div class="stat-label-premium">
+                    Proyectos<br />Completados
+                  </div>
+                </div>
+                <div class="stat-glow"></div>
               </div>
-              <div class="code-line">
-                &nbsp;&nbsp;name:
-                <span class="code-string">'Carlos Javier Ramos Cruz'</span>,
+
+              <div class="stat-card-premium">
+                <div class="stat-icon">
+                  <i class="fas fa-star"></i>
+                </div>
+                <div class="stat-content">
+                  <div class="stat-number-premium" data-target="100">0</div>
+                  <div class="stat-label-premium">
+                    % Clientes<br />Satisfechos
+                  </div>
+                </div>
+                <div class="stat-glow"></div>
               </div>
-              <div class="code-line">
-                &nbsp;&nbsp;title:
-                <span class="code-string">'Developer Jr. Full-Stack'</span>,
+
+              <div class="stat-card-premium">
+                <div class="stat-icon">
+                  <i class="fas fa-code"></i>
+                </div>
+                <div class="stat-content">
+                  <div class="stat-number-premium" data-target="3">0</div>
+                  <div class="stat-label-premium">Años de<br />Experiencia</div>
+                </div>
+                <div class="stat-glow"></div>
               </div>
-              <div class="code-line">&nbsp;&nbsp;skills: [</div>
-              <div class="code-line">
-                &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-string">'HTML5'</span
-                >, <span class="code-string">'CSS3'</span>,
-                <span class="code-string">'JavaScript'</span>,
+
+              <div class="stat-card-premium">
+                <div class="stat-icon">
+                  <i class="fas fa-clock"></i>
+                </div>
+                <div class="stat-content">
+                  <div class="stat-number-premium" data-target="24">0</div>
+                  <div class="stat-label-premium">Horas<br />Respuesta</div>
+                </div>
+                <div class="stat-glow"></div>
               </div>
-              <div class="code-line">
-                &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-string">'PHP'</span>,
-                <span class="code-string">'MySQL'</span>,
-                <span class="code-string">'Node.js'</span>
+            </div>
+          </div>
+
+          <!-- Right: Story & Skills -->
+          <div class="about-story-section">
+            <!-- Story Card -->
+            <div class="story-card glass-card">
+              <div class="story-header">
+                <div class="story-icon">
+                  <i class="fas fa-user-circle"></i>
+                </div>
+                <h3>Mi Historia</h3>
               </div>
-              <div class="code-line">&nbsp;&nbsp;],</div>
-              <div class="code-line">
-                &nbsp;&nbsp;passion:
-                <span class="code-string">'Creating Digital Experiences'</span>,
+              <div class="story-content">
+                <p class="story-text">
+                  <strong>Ingeniero en Sistemas Computacionales</strong> con una
+                  pasión desmedida por el desarrollo web y la creación de
+                  experiencias digitales que
+                  <span class="highlight-inline">importan</span>.
+                </p>
+                <p class="story-text">
+                  No me conformo con "bonito". Cada proyecto es una oportunidad
+                  para crear algo memorable, funcional y orientado a resultados.
+                  Combino diseño audaz con código estructurado para entregar
+                  productos que no solo se ven bien, sino que
+                  <em>funcionan perfectamente</em>.
+                </p>
+                <p class="story-text">
+                  Mi proceso: <strong>Escuchar</strong> →
+                  <strong>Diseñar</strong> → <strong>Desarrollar</strong> →
+                  <strong>Optimizar</strong>. Simple, pero efectivo.
+                </p>
               </div>
-              <div class="code-line">
-                &nbsp;&nbsp;mindset:
-                <span class="code-string"
-                  >'Always Learning, Always Growing'</span
-                >,
+            </div>
+
+            <!-- Skills Showcase -->
+            <div class="skills-showcase">
+              <h4 class="skills-title">
+                <i class="fas fa-bolt"></i>
+                Expertise
+              </h4>
+              <div class="skills-tags-premium">
+                <span class="skill-tag-premium">
+                  <span class="tag-icon">⚡</span>
+                  Clean Code
+                </span>
+                <span class="skill-tag-premium">
+                  <span class="tag-icon">🎨</span>
+                  UX/UI Focus
+                </span>
+                <span class="skill-tag-premium">
+                  <span class="tag-icon">🚀</span>
+                  Performance
+                </span>
+                <span class="skill-tag-premium">
+                  <span class="tag-icon">📱</span>
+                  Responsive
+                </span>
+                <span class="skill-tag-premium">
+                  <span class="tag-icon">💡</span>
+                  Innovation
+                </span>
+                <span class="skill-tag-premium">
+                  <span class="tag-icon">✨</span>
+                  Creativity
+                </span>
               </div>
-              <div class="code-line">
-                &nbsp;&nbsp;location:
-                <span class="code-string"
-                  >'San Cristóbal de las Casas, MX'</span
-                >
-              </div>
-              <div class="code-line">};</div>
-              <div class="code-line" style="margin-top: 1.5rem">
-                <span class="code-comment"
-                  >// Transformando ideas en realidad digital</span
-                >
-              </div>
-              <div class="code-line">
-                <span class="code-function">buildAmazingExperiences</span>();
+            </div>
+
+            <!-- Tech Stack -->
+            <div class="tech-stack glass-card">
+              <h4 class="tech-title">Tech Stack</h4>
+              <div class="tech-grid">
+                <div class="tech-item">
+                  <div class="tech-icon-wrapper">
+                    <i class="fab fa-html5"></i>
+                  </div>
+                  <span>HTML5</span>
+                </div>
+                <div class="tech-item">
+                  <div class="tech-icon-wrapper">
+                    <i class="fab fa-css3-alt"></i>
+                  </div>
+                  <span>CSS3</span>
+                </div>
+                <div class="tech-item">
+                  <div class="tech-icon-wrapper">
+                    <i class="fab fa-js"></i>
+                  </div>
+                  <span>JavaScript</span>
+                </div>
+                <div class="tech-item">
+                  <div class="tech-icon-wrapper">
+                    <i class="fab fa-php"></i>
+                  </div>
+                  <span>PHP</span>
+                </div>
+                <div class="tech-item">
+                  <div class="tech-icon-wrapper">
+                    <i class="fab fa-node-js"></i>
+                  </div>
+                  <span>Node.js</span>
+                </div>
+                <div class="tech-item">
+                  <div class="tech-icon-wrapper">
+                    <i class="fas fa-database"></i>
+                  </div>
+                  <span>MySQL</span>
+                </div>
               </div>
             </div>
           </div>
@@ -221,15 +328,15 @@
     <!-- Projects Section -->
     <section class="projects reveal" id="proyectos">
       <div class="section-header">
-        <h2 class="section-title">TRABAJOS RECIENTES</h2>
+        <h2 class="section-title">PROYECTOS DESTACADOS</h2>
         <div class="section-number">02</div>
       </div>
       <p class="section-subtitle">
-        Cada proyecto cuenta una historia. Estos son algunos de mis favoritos.
+        Landing pages que convierten. Resultados reales, clientes satisfechos.
       </p>
 
       <div class="projects-grid">
-        <!-- Project 1 -->
+        <!-- Project 1 - TechRepair Pro -->
         <div class="project-card" data-project="1">
           <div class="project-content">
             <div class="project-number">01 — TECNOLOGÍA</div>
@@ -266,11 +373,26 @@
             </a>
           </div>
           <div class="project-image">
-            <img
-              src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&h=600&fit=crop"
-              alt="TechRepair Pro"
-              loading="lazy"
-            />
+            <div class="image-carousel">
+              <div class="carousel-track">
+                <img
+                  src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&h=600&fit=crop"
+                  alt="TechRepair Pro - Vista 1"
+                  loading="lazy"
+                />
+                <img
+                  src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&h=600&fit=crop"
+                  alt="TechRepair Pro - Vista 2"
+                  loading="lazy"
+                />
+                <img
+                  src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop"
+                  alt="TechRepair Pro - Vista 3"
+                  loading="lazy"
+                />
+              </div>
+              <div class="carousel-indicators"></div>
+            </div>
             <div class="project-overlay">
               <div class="overlay-icon">
                 <i class="fas fa-laptop-code"></i>
@@ -279,7 +401,7 @@
           </div>
         </div>
 
-        <!-- Project 2 -->
+        <!-- Project 2 - SecureVision CCTV -->
         <div class="project-card" data-project="2">
           <div class="project-content">
             <div class="project-number">02 — SEGURIDAD</div>
@@ -316,11 +438,26 @@
             </a>
           </div>
           <div class="project-image">
-            <img
-              src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=800&h=600&fit=crop"
-              alt="SecureVision CCTV"
-              loading="lazy"
-            />
+            <div class="image-carousel">
+              <div class="carousel-track">
+                <img
+                  src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=800&h=600&fit=crop"
+                  alt="SecureVision CCTV - Vista 1"
+                  loading="lazy"
+                />
+                <img
+                  src="https://images.unsplash.com/photo-1558002038-1055907df827?w=800&h=600&fit=crop"
+                  alt="SecureVision CCTV - Vista 2"
+                  loading="lazy"
+                />
+                <img
+                  src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&h=600&fit=crop"
+                  alt="SecureVision CCTV - Vista 3"
+                  loading="lazy"
+                />
+              </div>
+              <div class="carousel-indicators"></div>
+            </div>
             <div class="project-overlay">
               <div class="overlay-icon">
                 <i class="fas fa-video"></i>
@@ -329,8 +466,8 @@
           </div>
         </div>
 
-        <!-- Project 3 -->
-        <div class="project-card" data-project="3">
+        <!-- Project 3 - Portfolio -->
+        <div class="project-card" data-project="portfolio">
           <div class="project-content">
             <div class="project-number">03 — PORTFOLIO</div>
             <h3>Portfolio Interactivo</h3>
@@ -365,12 +502,35 @@
               <i class="fas fa-arrow-right"></i>
             </a>
           </div>
-          <div class="project-image">
-            <img
-              src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&h=600&fit=crop"
-              alt="Portfolio Interactivo"
-              loading="lazy"
-            />
+          <div class="project-image portfolio-animation">
+            <div class="code-animation">
+              <div class="code-particles"></div>
+              <div class="code-lines">
+                <div class="code-line" style="--delay: 0s">&lt;html&gt;</div>
+                <div class="code-line" style="--delay: 0.2s">
+                  &lt;body class="creative"&gt;
+                </div>
+                <div class="code-line" style="--delay: 0.4s">
+                  &lt;div class="portfolio"&gt;
+                </div>
+                <div class="code-line" style="--delay: 0.6s">
+                  animation: <span class="highlight">infinite</span>;
+                </div>
+                <div class="code-line" style="--delay: 0.8s">
+                  creativity: <span class="highlight">100%</span>;
+                </div>
+                <div class="code-line" style="--delay: 1s">
+                  performance: <span class="highlight">optimized</span>;
+                </div>
+                <div class="code-line" style="--delay: 1.2s">&lt;/div&gt;</div>
+                <div class="code-line" style="--delay: 1.4s">&lt;/body&gt;</div>
+                <div class="code-line" style="--delay: 1.6s">&lt;/html&gt;</div>
+              </div>
+              <div class="gradient-orb orb-1"></div>
+              <div class="gradient-orb orb-2"></div>
+              <div class="gradient-orb orb-3"></div>
+              <canvas id="portfolioCanvas"></canvas>
+            </div>
             <div class="project-overlay">
               <div class="overlay-icon">
                 <i class="fas fa-palette"></i>
@@ -380,7 +540,6 @@
         </div>
       </div>
 
-      <!-- CTA Banner -->
       <div class="projects-cta reveal">
         <div class="cta-content">
           <h3>¿Listo para crear algo increíble?</h3>
@@ -457,9 +616,9 @@
                 </div>
               </li>
               <li>
-                <span class="skill-name">Prototipado</span>
+                <span class="skill-name">Figma & Prototipado</span>
                 <div class="skill-bar">
-                  <div class="skill-progress" data-progress="82"></div>
+                  <div class="skill-progress" data-progress="85"></div>
                 </div>
               </li>
               <li>
@@ -469,7 +628,7 @@
                 </div>
               </li>
               <li>
-                <span class="skill-name">Tipografía & Color</span>
+                <span class="skill-name">Optimización de Conversión</span>
                 <div class="skill-bar">
                   <div class="skill-progress" data-progress="90"></div>
                 </div>
@@ -479,35 +638,69 @@
 
           <div class="skill-category">
             <div class="category-icon">
-              <i class="fas fa-server"></i>
+              <i class="fas fa-tools"></i>
             </div>
-            <h3>Backend & Database</h3>
+            <h3>Herramientas & Workflows</h3>
             <p class="category-description">
-              Desarrollo de aplicaciones completas y robustas
+              Productividad y colaboración efectiva
             </p>
             <ul class="skill-list">
               <li>
-                <span class="skill-name">PHP & MySQL</span>
+                <span class="skill-name">Git & GitHub</span>
                 <div class="skill-bar">
                   <div class="skill-progress" data-progress="85"></div>
                 </div>
               </li>
               <li>
-                <span class="skill-name">Node.js</span>
+                <span class="skill-name">VS Code</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="95"></div>
+                </div>
+              </li>
+              <li>
+                <span class="skill-name">Performance Tools</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="82"></div>
+                </div>
+              </li>
+              <li>
+                <span class="skill-name">SEO Básico</span>
                 <div class="skill-bar">
                   <div class="skill-progress" data-progress="75"></div>
                 </div>
               </li>
+            </ul>
+          </div>
+
+          <div class="skill-category">
+            <div class="category-icon">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <h3>Optimización & Performance</h3>
+            <p class="category-description">Sitios rápidos que convierten</p>
+            <ul class="skill-list">
               <li>
-                <span class="skill-name">API Integration</span>
+                <span class="skill-name">Web Performance</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="88"></div>
+                </div>
+              </li>
+              <li>
+                <span class="skill-name">Lazy Loading</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="90"></div>
+                </div>
+              </li>
+              <li>
+                <span class="skill-name">Code Splitting</span>
                 <div class="skill-bar">
                   <div class="skill-progress" data-progress="80"></div>
                 </div>
               </li>
               <li>
-                <span class="skill-name">Java</span>
+                <span class="skill-name">Accessibility (a11y)</span>
                 <div class="skill-bar">
-                  <div class="skill-progress" data-progress="78"></div>
+                  <div class="skill-progress" data-progress="85"></div>
                 </div>
               </li>
             </ul>
@@ -516,192 +709,233 @@
       </div>
     </section>
 
-    <!-- Contact Section -->
-    <section class="contact reveal" id="contacto">
-      <div class="contact-container">
-        <div class="contact-header">
-          <h2>CONSTRUYAMOS ALGO JUNTOS</h2>
-          <p>
-            ¿Tienes un proyecto en mente? Me encantaría escucharlo. Respondo
-            todos los mensajes en menos de 24 horas.
+    <!-- Contact Section - NUEVO DISEÑO PREMIUM -->
+    <section class="contact-premium reveal" id="contacto">
+      <div class="contact-premium-container">
+        <!-- Background Effects -->
+        <div class="contact-bg-effects">
+          <div class="liquid-shape shape-1"></div>
+          <div class="liquid-shape shape-2"></div>
+          <div class="particle-field" id="contactParticles"></div>
+        </div>
+
+        <!-- Section Header -->
+        <div class="contact-header-premium">
+          <div class="section-label">
+            <span class="label-number">04</span>
+            <span class="label-text">CONTACTO</span>
+          </div>
+          <h2 class="contact-title">
+            Construyamos Algo<br />
+            <span class="title-gradient">Increíble Juntos</span>
+          </h2>
+          <p class="contact-subtitle">
+            ¿Tienes un proyecto en mente? Me encantaría escucharlo.<br />
+            Respondo todos los mensajes en menos de 24 horas.
           </p>
         </div>
-        <div class="contact-grid">
-          <div class="contact-info">
-            <div class="contact-intro">
-              <h3>Información de Contacto</h3>
-              <p>
-                Prefiero trabajar en colaboración cercana con mis clientes. Ya
-                sea un proyecto grande o pequeño, estoy aquí para ayudarte.
-              </p>
+
+        <!-- Contact Grid -->
+        <div class="contact-grid-premium">
+          <!-- Left: Contact Info Cards -->
+          <div class="contact-info-premium">
+            <!-- Quick Contact Card -->
+            <div class="quick-contact-card glass-card">
+              <h3 class="card-title">
+                <i class="fas fa-bolt"></i>
+                Contacto Rápido
+              </h3>
+
+              <div class="contact-methods-premium">
+                <a
+                  href="mailto:javierramos.04@outlook.com"
+                  class="contact-method-premium"
+                >
+                  <div class="method-icon-premium">
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                  <div class="method-details-premium">
+                    <span class="method-label">Email</span>
+                    <span class="method-value">javierramos.04@outlook.com</span>
+                  </div>
+                  <div class="method-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                  </div>
+                </a>
+
+                <a
+                  href="https://wa.me/5219191234567"
+                  target="_blank"
+                  class="contact-method-premium"
+                >
+                  <div class="method-icon-premium whatsapp">
+                    <i class="fab fa-whatsapp"></i>
+                  </div>
+                  <div class="method-details-premium">
+                    <span class="method-label">WhatsApp</span>
+                    <span class="method-value">+52 919 123 4567</span>
+                  </div>
+                  <div class="method-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                  </div>
+                </a>
+              </div>
             </div>
 
-            <div class="contact-item">
-              <div class="contact-icon">
-                <i class="fas fa-envelope"></i>
-              </div>
-              <div class="contact-details">
-                <div class="contact-label">Email</div>
-                <div class="contact-value">
-                  <a href="mailto:javierramos.04@outlook.com"
-                    >javierramos.04@outlook.com</a
+            <!-- Info Card -->
+            <div class="info-card glass-card">
+              <div class="info-item-premium">
+                <div class="info-icon-premium">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="info-content-premium">
+                  <span class="info-label-premium">Ubicación</span>
+                  <span class="info-value-premium"
+                    >San Cristóbal, Chiapas, MX</span
                   >
+                </div>
+              </div>
+
+              <div class="info-item-premium">
+                <div class="info-icon-premium">
+                  <i class="fas fa-clock"></i>
+                </div>
+                <div class="info-content-premium">
+                  <span class="info-label-premium">Disponibilidad</span>
+                  <span class="info-value-premium"
+                    >Lun — Dom, 9:00 AM — 7:30 PM</span
+                  >
+                </div>
+              </div>
+
+              <div class="info-item-premium">
+                <div class="info-icon-premium">
+                  <i class="fas fa-language"></i>
+                </div>
+                <div class="info-content-premium">
+                  <span class="info-label-premium">Idiomas</span>
+                  <span class="info-value-premium">Español, Inglés</span>
                 </div>
               </div>
             </div>
 
-            <div class="contact-item">
-              <div class="contact-icon">
-                <i class="fas fa-map-marker-alt"></i>
-              </div>
-              <div class="contact-details">
-                <div class="contact-label">Ubicación</div>
-                <div class="contact-value">
-                  San Cristóbal de las Casas, Chiapas, México
-                </div>
-              </div>
-            </div>
-
-            <div class="contact-item">
-              <div class="contact-icon">
-                <i class="fas fa-clock"></i>
-              </div>
-              <div class="contact-details">
-                <div class="contact-label">Disponibilidad</div>
-                <div class="contact-value">
-                  Lun — Dom, 9:00 AM — 7:30 PM (GMT-6)
-                </div>
-              </div>
-            </div>
-
-            <div class="contact-item">
-              <div class="contact-icon">
-                <i class="fas fa-share-alt"></i>
-              </div>
-              <div class="contact-details">
-                <div class="contact-label">Sígueme en</div>
-                <div class="social-links">
-                  <a
-                    href="https://www.tiktok.com/@nexusdigital_mx"
-                    class="social-link"
-                    aria-label="TikTok"
-                    title="TikTok"
-                  >
-                    <i class="fab fa-tiktok"></i>
-                  </a>
-                  <a
-                    href="#"
-                    class="social-link"
-                    aria-label="Facebook"
-                    title="Facebook"
-                  >
-                    <i class="fab fa-facebook"></i>
-                  </a>
-                  <a
-                    href="#"
-                    class="social-link"
-                    aria-label="LinkedIn"
-                    title="LinkedIn"
-                  >
-                    <i class="fab fa-linkedin"></i>
-                  </a>
-                  <a
-                    href="#"
-                    class="social-link"
-                    aria-label="GitHub"
-                    title="GitHub"
-                  >
-                    <i class="fab fa-github"></i>
-                  </a>
-                </div>
+            <!-- Social Links Card -->
+            <div class="social-card glass-card">
+              <h4 class="card-subtitle">Sígueme en redes</h4>
+              <div class="social-links-premium">
+                <a href="#" class="social-link-premium" aria-label="GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="#" class="social-link-premium" aria-label="LinkedIn">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="#" class="social-link-premium" aria-label="Twitter">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="social-link-premium" aria-label="Instagram">
+                  <i class="fab fa-instagram"></i>
+                </a>
               </div>
             </div>
           </div>
 
-          <form class="contact-form" id="contactForm">
-            <div class="form-header">
+          <!-- Right: Form -->
+          <div class="contact-form-premium glass-card">
+            <div class="form-header-premium">
               <h3>Envíame un Mensaje</h3>
-              <p>
-                Completa el formulario y me pondré en contacto contigo pronto
-              </p>
+              <p>Completa el formulario y me pondré en contacto pronto</p>
             </div>
 
-            <div class="form-row">
-              <div class="form-group">
-                <label for="name">
-                  <i class="fas fa-user"></i>
-                  Nombre Completo
+            <form id="contactForm" class="modern-form">
+              <div class="form-row-premium">
+                <div class="form-group-premium">
+                  <label for="name" class="form-label-premium">
+                    <i class="fas fa-user"></i>
+                    Nombre Completo
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    class="form-input-premium"
+                    placeholder="Tu nombre"
+                    required
+                  />
+                  <div class="input-line"></div>
+                </div>
+
+                <div class="form-group-premium">
+                  <label for="email" class="form-label-premium">
+                    <i class="fas fa-envelope"></i>
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="form-input-premium"
+                    placeholder="tu@email.com"
+                    required
+                  />
+                  <div class="input-line"></div>
+                </div>
+              </div>
+
+              <div class="form-group-premium">
+                <label for="subject" class="form-label-premium">
+                  <i class="fas fa-tag"></i>
+                  Tipo de Proyecto
                 </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  placeholder="Ej: Juan Pérez"
+                <select
+                  id="subject"
+                  name="subject"
+                  class="form-select-premium"
                   required
-                />
+                >
+                  <option value="">Selecciona una opción</option>
+                  <option value="Landing Page">Landing Page</option>
+                  <option value="Portfolio Personal">Portfolio Personal</option>
+                  <option value="Sitio Corporativo">Sitio Corporativo</option>
+                  <option value="Rediseño Web">Rediseño Web</option>
+                  <option value="Consultoría">Consultoría</option>
+                  <option value="Otro">Otro</option>
+                </select>
+                <div class="input-line"></div>
               </div>
 
-              <div class="form-group">
-                <label for="email">
-                  <i class="fas fa-envelope"></i>
-                  Correo Electrónico
+              <div class="form-group-premium">
+                <label for="message" class="form-label-premium">
+                  <i class="fas fa-comment-dots"></i>
+                  Mensaje
                 </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="tu@email.com"
+                <textarea
+                  id="message"
+                  name="message"
+                  class="form-textarea-premium"
+                  placeholder="Cuéntame sobre tu proyecto..."
+                  rows="5"
                   required
-                />
+                ></textarea>
+                <div class="input-line"></div>
+                <div class="char-counter-premium">
+                  <span id="charCount">0</span> / 1000
+                </div>
               </div>
-            </div>
 
-            <div class="form-group">
-              <label for="subject">
-                <i class="fas fa-tag"></i>
-                Asunto
-              </label>
-              <select id="subject" name="subject" required>
-                <option value="">Selecciona un tipo de proyecto</option>
-                <option value="landing-page">Landing Page</option>
-                <option value="website">Sitio Web Completo</option>
-                <option value="ecommerce">E-commerce</option>
-                <option value="redesign">Rediseño de Sitio</option>
-                <option value="maintenance">Mantenimiento</option>
-                <option value="other">Otro</option>
-              </select>
-            </div>
+              <button type="submit" class="submit-btn-premium" id="submitBtn">
+                <span class="btn-content">
+                  <span class="btn-text-premium">Enviar Mensaje</span>
+                  <span class="btn-loader-premium"></span>
+                </span>
+                <span class="btn-icon-premium">
+                  <i class="fas fa-paper-plane"></i>
+                </span>
+                <div class="btn-ripple"></div>
+              </button>
 
-            <div class="form-group">
-              <label for="message">
-                <i class="fas fa-comment-dots"></i>
-                Cuéntame sobre tu proyecto
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                placeholder="Describe tu proyecto, objetivos, timeline, etc."
-                required
-              ></textarea>
-              <div class="char-counter">
-                <span id="charCount">0</span> / 1000 caracteres
-              </div>
-            </div>
-
-            <button type="submit" class="submit-btn" id="submitBtn">
-              <span class="btn-text">Enviar Mensaje</span>
-              <span class="btn-loading">
-                <i class="fas fa-spinner fa-spin"></i>
-                Enviando...
-              </span>
-              <span class="btn-success">
-                <i class="fas fa-check"></i>
-                ¡Enviado!
-              </span>
-            </button>
-
-            <div class="form-status" id="formStatus"></div>
-          </form>
+              <div class="form-status-premium" id="formStatus"></div>
+            </form>
+          </div>
         </div>
       </div>
     </section>
@@ -716,7 +950,7 @@
             Un proyecto a la vez.
           </p>
           <div class="footer-social">
-            <a href="https://www.tiktok.com/@nexusdigital_mx" class="footer-social-link" aria-label="TikTok">
+            <a href="#" class="footer-social-link" aria-label="TikTok">
               <i class="fab fa-tiktok"></i>
             </a>
             <a href="#" class="footer-social-link" aria-label="Facebook">
@@ -771,6 +1005,11 @@
       </div>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Volver arriba">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+     <script src="script.js"></script> 
   </body>
 </html>

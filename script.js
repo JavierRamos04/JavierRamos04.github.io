@@ -90,6 +90,245 @@ function createParticles() {
 createParticles();
 
 // ===========================
+// IMAGE CAROUSEL
+// ===========================
+class ImageCarousel {
+  constructor(element) {
+    this.element = element;
+    this.track = element.querySelector(".carousel-track");
+    this.images = Array.from(element.querySelectorAll(".carousel-track img"));
+    this.indicatorsContainer = element.querySelector(".carousel-indicators");
+    this.currentIndex = 0;
+    this.interval = null;
+    this.intervalTime = 4000; // 4 segundos
+    this.touchStartX = 0;
+    this.touchEndX = 0;
+
+    this.init();
+  }
+
+  init() {
+    if (this.images.length <= 1) return; // No carousel needed for single image
+
+    this.createIndicators();
+    this.startAutoPlay();
+    this.setupTouchEvents();
+    this.setupHoverPause();
+  }
+
+  createIndicators() {
+    this.images.forEach((_, index) => {
+      const indicator = document.createElement("div");
+      indicator.className = `carousel-indicator ${index === 0 ? "active" : ""}`;
+      indicator.addEventListener("click", () => this.goToSlide(index));
+      this.indicatorsContainer.appendChild(indicator);
+    });
+    this.indicators = Array.from(
+      this.indicatorsContainer.querySelectorAll(".carousel-indicator"),
+    );
+  }
+
+  updateIndicators() {
+    this.indicators.forEach((indicator, index) => {
+      indicator.classList.toggle("active", index === this.currentIndex);
+    });
+  }
+
+  goToSlide(index) {
+    this.images[this.currentIndex].classList.remove("active");
+    this.currentIndex = index;
+    this.images[this.currentIndex].classList.add("active");
+    this.updateIndicators();
+  }
+
+  nextSlide() {
+    const nextIndex = (this.currentIndex + 1) % this.images.length;
+    this.goToSlide(nextIndex);
+  }
+
+  prevSlide() {
+    const prevIndex =
+      (this.currentIndex - 1 + this.images.length) % this.images.length;
+    this.goToSlide(prevIndex);
+  }
+
+  startAutoPlay() {
+    this.interval = setInterval(() => this.nextSlide(), this.intervalTime);
+  }
+
+  stopAutoPlay() {
+    if (this.interval) {
+      clearInterval(this.interval);
+      this.interval = null;
+    }
+  }
+
+  setupHoverPause() {
+    this.element.addEventListener("mouseenter", () => this.stopAutoPlay());
+    this.element.addEventListener("mouseleave", () => this.startAutoPlay());
+  }
+
+  setupTouchEvents() {
+    this.element.addEventListener(
+      "touchstart",
+      (e) => {
+        this.touchStartX = e.changedTouches[0].screenX;
+        this.stopAutoPlay();
+      },
+      { passive: true },
+    );
+
+    this.element.addEventListener(
+      "touchend",
+      (e) => {
+        this.touchEndX = e.changedTouches[0].screenX;
+        this.handleSwipe();
+        this.startAutoPlay();
+      },
+      { passive: true },
+    );
+  }
+
+  handleSwipe() {
+    const swipeThreshold = 50;
+    const diff = this.touchStartX - this.touchEndX;
+
+    if (Math.abs(diff) > swipeThreshold) {
+      if (diff > 0) {
+        this.nextSlide();
+      } else {
+        this.prevSlide();
+      }
+    }
+  }
+}
+
+// Initialize all carousels
+document.addEventListener("DOMContentLoaded", () => {
+  const carousels = document.querySelectorAll(".image-carousel");
+  carousels.forEach((carousel) => new ImageCarousel(carousel));
+});
+
+// ===========================
+// PORTFOLIO CANVAS ANIMATION
+// ===========================
+class PortfolioAnimation {
+  constructor(canvas) {
+    this.canvas = canvas;
+    this.ctx = canvas.getContext("2d");
+    this.particles = [];
+    this.particleCount = 50;
+    this.mouse = { x: 0, y: 0 };
+
+    this.init();
+  }
+
+  init() {
+    this.resizeCanvas();
+    this.createParticles();
+    this.setupMouseTracking();
+    this.animate();
+
+    window.addEventListener("resize", () => this.resizeCanvas());
+  }
+
+  resizeCanvas() {
+    this.canvas.width = this.canvas.offsetWidth;
+    this.canvas.height = this.canvas.offsetHeight;
+  }
+
+  createParticles() {
+    for (let i = 0; i < this.particleCount; i++) {
+      this.particles.push({
+        x: Math.random() * this.canvas.width,
+        y: Math.random() * this.canvas.height,
+        size: Math.random() * 2 + 1,
+        speedX: Math.random() * 2 - 1,
+        speedY: Math.random() * 2 - 1,
+        opacity: Math.random() * 0.5 + 0.2,
+      });
+    }
+  }
+
+  setupMouseTracking() {
+    this.canvas.addEventListener("mousemove", (e) => {
+      const rect = this.canvas.getBoundingClientRect();
+      this.mouse.x = e.clientX - rect.left;
+      this.mouse.y = e.clientY - rect.top;
+    });
+  }
+
+  drawParticles() {
+    this.particles.forEach((particle) => {
+      this.ctx.beginPath();
+      this.ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+      this.ctx.fillStyle = `rgba(255, 51, 102, ${particle.opacity})`;
+      this.ctx.shadowBlur = 10;
+      this.ctx.shadowColor = "#ff3366";
+      this.ctx.fill();
+
+      // Draw connections
+      this.particles.forEach((otherParticle) => {
+        const dx = particle.x - otherParticle.x;
+        const dy = particle.y - otherParticle.y;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+
+        if (distance < 100) {
+          this.ctx.beginPath();
+          this.ctx.strokeStyle = `rgba(0, 240, 255, ${0.2 * (1 - distance / 100)})`;
+          this.ctx.lineWidth = 1;
+          this.ctx.moveTo(particle.x, particle.y);
+          this.ctx.lineTo(otherParticle.x, otherParticle.y);
+          this.ctx.stroke();
+        }
+      });
+    });
+  }
+
+  updateParticles() {
+    this.particles.forEach((particle) => {
+      particle.x += particle.speedX;
+      particle.y += particle.speedY;
+
+      // Mouse interaction
+      const dx = this.mouse.x - particle.x;
+      const dy = this.mouse.y - particle.y;
+      const distance = Math.sqrt(dx * dx + dy * dy);
+
+      if (distance < 100) {
+        particle.x -= dx * 0.02;
+        particle.y -= dy * 0.02;
+      }
+
+      // Bounce off edges
+      if (particle.x < 0 || particle.x > this.canvas.width)
+        particle.speedX *= -1;
+      if (particle.y < 0 || particle.y > this.canvas.height)
+        particle.speedY *= -1;
+
+      // Keep particles within bounds
+      particle.x = Math.max(0, Math.min(this.canvas.width, particle.x));
+      particle.y = Math.max(0, Math.min(this.canvas.height, particle.y));
+    });
+  }
+
+  animate() {
+    this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+    this.drawParticles();
+    this.updateParticles();
+    requestAnimationFrame(() => this.animate());
+  }
+}
+
+// Initialize portfolio animation
+document.addEventListener("DOMContentLoaded", () => {
+  const portfolioCanvas = document.getElementById("portfolioCanvas");
+  if (portfolioCanvas) {
+    new PortfolioAnimation(portfolioCanvas);
+  }
+});
+
+// ===========================
 // MENU TOGGLE
 // ===========================
 function toggleMenu() {
@@ -404,24 +643,6 @@ projectCards.forEach((card, index) => {
 });
 
 // ===========================
-// TYPING EFFECT (Optional)
-// ===========================
-function typeWriter(element, text, speed = 50) {
-  let i = 0;
-  element.textContent = "";
-
-  function type() {
-    if (i < text.length) {
-      element.textContent += text.charAt(i);
-      i++;
-      setTimeout(type, speed);
-    }
-  }
-
-  type();
-}
-
-// ===========================
 // LAZY LOADING IMAGES
 // ===========================
 const images = document.querySelectorAll('img[loading="lazy"]');
@@ -489,25 +710,3 @@ console.log(
   "color: #e8e8e8; font-size: 12px;",
 );
 console.log("%c- Javi", "color: #ff3366; font-size: 12px; font-style: italic;");
-
-// ===========================
-// EMAILJS CONFIGURATION GUIDE
-// ===========================
-/*
-CÓMO CONFIGURAR EMAILJS:
-
-1. Ve a https://www.emailjs.com/ y crea una cuenta gratuita
-2. Crea un nuevo servicio de email (Gmail, Outlook, etc.)
-3. Crea una plantilla de email con estas variables:
-   - {{from_name}}
-   - {{from_email}}
-   - {{subject}}
-   - {{message}}
-4. Obtén tu Public Key desde Account > General
-5. Reemplaza en el HTML (línea 14):
-   emailjs.init("YOUR_PUBLIC_KEY");
-6. Reemplaza en este archivo (línea 217):
-   await emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {...});
-
-¡Listo! El formulario enviará emails automáticamente.
-*/
