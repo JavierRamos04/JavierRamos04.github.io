@@ -366,7 +366,7 @@ nav.scrolled {
   border: 1px solid var(--accent);
   border-radius: 50px;
   font-family: "JetBrains Mono", monospace;
-  font-size: 0.85rem;
+  font-size: .75rem;
   margin-bottom: 2rem;
   animation: slideInLeft 0.8s ease;
 }
@@ -394,7 +394,7 @@ nav.scrolled {
 
 .hero-title {
   font-family: "Bebas Neue", cursive;
-  font-size: clamp(4rem, 12vw, 10rem);
+  font-size: clamp(3.5rem, 10vw, 8rem);
   line-height: 0.9;
   margin-bottom: 2rem;
   letter-spacing: -2px;
@@ -1093,7 +1093,7 @@ nav.scrolled {
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(415px, 1fr));
   gap: 3rem;
   margin-top: 4rem;
 }
