@@ -1225,7 +1225,6 @@ nav.scrolled {
   font-weight: 700;
   color: transparent;
   -webkit-text-stroke: 1px rgba(255, 51, 102, 0.05);
-  text-stroke: 1px rgba(255, 51, 102, 0.05);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
