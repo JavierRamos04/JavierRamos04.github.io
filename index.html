@@ -1,0 +1,776 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JaviDevLab | Desarrollo Web Creativo</title>
+    <meta
+      name="description"
+      content="Portfolio de desarrollo web especializado en landing pages de alto impacto. Diseño único, código limpio, resultados medibles."
+    />
+    <meta
+      name="keywords"
+      content="desarrollo web, landing pages, diseño web, portfolio, frontend developer"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <!-- EmailJS -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("YOUR_PUBLIC_KEY"); // Reemplaza con tu Public Key de EmailJS
+      })();
+    </script>
+  </head>
+  <body>
+    <!-- Cursor personalizado -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Progress bar -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- Navigation -->
+    <nav id="nav">
+      <div class="logo">JaviDev<span>.</span>Lab</div>
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#inicio" onclick="closeMenu()">Inicio</a></li>
+        <li><a href="#sobre-mi" onclick="closeMenu()">Sobre Mí</a></li>
+        <li><a href="#proyectos" onclick="closeMenu()">Proyectos</a></li>
+        <li><a href="#habilidades" onclick="closeMenu()">Habilidades</a></li>
+        <li><a href="#contacto" onclick="closeMenu()">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+      <div class="floating-element"></div>
+      <div class="hero-particles" id="particles"></div>
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="pulse-dot"></span>
+          DISPONIBLE PARA NUEVOS PROYECTOS
+        </div>
+        <h1 class="hero-title">
+          CREO<br />
+          <span class="outline">EXPERIENCIAS</span>
+          <span class="accent">DIGITALES</span>
+        </h1>
+        <p class="hero-subtitle">
+          Transformo ideas en landing pages que <strong>convierten</strong>.
+          Diseño único, código limpio y resultados medibles. No solo desarrollo
+          sitios web, creo
+          <span class="highlight-text">herramientas de crecimiento</span> para
+          tu negocio.
+        </p>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="stat-value" data-target="15">0</div>
+            <div class="stat-text">Proyectos</div>
+          </div>
+          <div class="hero-stat">
+            <div class="stat-value" data-target="100">0</div>
+            <div class="stat-text">% Satisfacción</div>
+          </div>
+          <div class="hero-stat">
+            <div class="stat-value" data-target="24">0</div>
+            <div class="stat-text">h Respuesta</div>
+          </div>
+        </div>
+        <div class="hero-cta">
+          <a href="#contacto" class="btn-primary">
+            <span>Iniciar Proyecto</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+          <a href="#proyectos" class="btn-secondary">
+            <span>Ver Portfolio</span>
+            <i class="fas fa-briefcase"></i>
+          </a>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <span>Descubre más</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about reveal" id="sobre-mi">
+      <div class="about-grid">
+        <div class="about-content">
+          <h2>Sobre <span>Mí</span></h2>
+          <p class="lead-text">
+            Ingeniero en Sistemas Computacionales con una pasión desmedida por
+            el desarrollo web y la creación de experiencias digitales que
+            <strong>importan</strong>.
+          </p>
+          <p>
+            No me conformo con "bonito". Cada proyecto es una oportunidad para
+            crear algo memorable, funcional y orientado a resultados. Combino
+            diseño audaz con código estructurado para entregar productos que no
+            solo se ven bien, sino que <em>funcionan perfectamente</em>.
+          </p>
+          <p>
+            Mi proceso: <strong>Escuchar</strong> → <strong>Diseñar</strong> →
+            <strong>Desarrollar</strong> → <strong>Optimizar</strong>. Simple,
+            pero efectivo. Cada línea de código tiene un propósito, cada
+            elemento visual cuenta una historia.
+          </p>
+          <div class="expertise-tags">
+            <span class="expertise-tag">Clean Code</span>
+            <span class="expertise-tag">UX/UI Focus</span>
+            <span class="expertise-tag">Performance First</span>
+            <span class="expertise-tag">Mobile Responsive</span>
+          </div>
+          <div class="about-stats">
+            <div class="stat-card">
+              <div class="stat-number">15+</div>
+              <div class="stat-label">Proyectos Completados</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">100%</div>
+              <div class="stat-label">Código Limpio y Estructurado</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">24h</div>
+              <div class="stat-label">Respuesta Garantizada</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">∞</div>
+              <div class="stat-label">Creatividad Sin Límites</div>
+            </div>
+          </div>
+        </div>
+        <div class="about-visual">
+          <div class="code-preview">
+            <div class="code-header">
+              <div class="code-dots">
+                <div class="code-dot"></div>
+                <div class="code-dot"></div>
+                <div class="code-dot"></div>
+              </div>
+              <div class="code-title">developer.js</div>
+            </div>
+            <div class="code-content">
+              <div class="code-line">
+                <span class="code-keyword">const</span>
+                <span class="code-function">developer</span> = {
+              </div>
+              <div class="code-line">
+                &nbsp;&nbsp;name:
+                <span class="code-string">'Carlos Javier Ramos Cruz'</span>,
+              </div>
+              <div class="code-line">
+                &nbsp;&nbsp;title:
+                <span class="code-string">'Developer Jr. Full-Stack'</span>,
+              </div>
+              <div class="code-line">&nbsp;&nbsp;skills: [</div>
+              <div class="code-line">
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-string">'HTML5'</span
+                >, <span class="code-string">'CSS3'</span>,
+                <span class="code-string">'JavaScript'</span>,
+              </div>
+              <div class="code-line">
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-string">'PHP'</span>,
+                <span class="code-string">'MySQL'</span>,
+                <span class="code-string">'Node.js'</span>
+              </div>
+              <div class="code-line">&nbsp;&nbsp;],</div>
+              <div class="code-line">
+                &nbsp;&nbsp;passion:
+                <span class="code-string">'Creating Digital Experiences'</span>,
+              </div>
+              <div class="code-line">
+                &nbsp;&nbsp;mindset:
+                <span class="code-string"
+                  >'Always Learning, Always Growing'</span
+                >,
+              </div>
+              <div class="code-line">
+                &nbsp;&nbsp;location:
+                <span class="code-string"
+                  >'San Cristóbal de las Casas, MX'</span
+                >
+              </div>
+              <div class="code-line">};</div>
+              <div class="code-line" style="margin-top: 1.5rem">
+                <span class="code-comment"
+                  >// Transformando ideas en realidad digital</span
+                >
+              </div>
+              <div class="code-line">
+                <span class="code-function">buildAmazingExperiences</span>();
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects reveal" id="proyectos">
+      <div class="section-header">
+        <h2 class="section-title">TRABAJOS RECIENTES</h2>
+        <div class="section-number">02</div>
+      </div>
+      <p class="section-subtitle">
+        Cada proyecto cuenta una historia. Estos son algunos de mis favoritos.
+      </p>
+
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card" data-project="1">
+          <div class="project-content">
+            <div class="project-number">01 — TECNOLOGÍA</div>
+            <h3>TechRepair Pro</h3>
+            <p>
+              Landing page de alto impacto para negocio de reparación de
+              cómputo. Diseño moderno con sistema de reservas integrado,
+              optimizado para conversión móvil. Incrementó consultas en un 150%
+              durante el primer mes.
+            </p>
+            <div class="project-features">
+              <div class="feature">
+                <i class="fas fa-check"></i>
+                <span>Sistema de citas en línea</span>
+              </div>
+              <div class="feature">
+                <i class="fas fa-check"></i>
+                <span>Galería de servicios</span>
+              </div>
+              <div class="feature">
+                <i class="fas fa-check"></i>
+                <span>WhatsApp integration</span>
+              </div>
+            </div>
+            <div class="project-tags">
+              <span class="tag">HTML5</span>
+              <span class="tag">CSS3</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">Responsive</span>
+            </div>
+            <a href="#contacto" class="project-link">
+              <span>Solicitar Similar</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+          <div class="project-image">
+            <img
+              src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&h=600&fit=crop"
+              alt="TechRepair Pro"
+              loading="lazy"
+            />
+            <div class="project-overlay">
+              <div class="overlay-icon">
+                <i class="fas fa-laptop-code"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card" data-project="2">
+          <div class="project-content">
+            <div class="project-number">02 — SEGURIDAD</div>
+            <h3>SecureVision CCTV</h3>
+            <p>
+              Sitio web profesional para empresa de sistemas de seguridad.
+              Diseño elegante con enfoque en confianza y profesionalismo.
+              Incluye calculadora de presupuestos y chat en vivo para atención
+              inmediata.
+            </p>
+            <div class="project-features">
+              <div class="feature">
+                <i class="fas fa-check"></i>
+                <span>Calculadora de presupuestos</span>
+              </div>
+              <div class="feature">
+                <i class="fas fa-check"></i>
+                <span>Portfolio de instalaciones</span>
+              </div>
+              <div class="feature">
+                <i class="fas fa-check"></i>
+                <span>Certificaciones destacadas</span>
+              </div>
+            </div>
+            <div class="project-tags">
+              <span class="tag">HTML5</span>
+              <span class="tag">CSS3</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">UX/UI</span>
+            </div>
+            <a href="#contacto" class="project-link">
+              <span>Solicitar Similar</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+          <div class="project-image">
+            <img
+              src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=800&h=600&fit=crop"
+              alt="SecureVision CCTV"
+              loading="lazy"
+            />
+            <div class="project-overlay">
+              <div class="overlay-icon">
+                <i class="fas fa-video"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card" data-project="3">
+          <div class="project-content">
+            <div class="project-number">03 — PORTFOLIO</div>
+            <h3>Portfolio Interactivo</h3>
+            <p>
+              Este mismo sitio web. Un portfolio experimental con animaciones
+              avanzadas, efectos parallax y micro-interacciones que crean una
+              experiencia memorable. Código limpio, performance optimizado, 100%
+              responsive.
+            </p>
+            <div class="project-features">
+              <div class="feature">
+                <i class="fas fa-check"></i>
+                <span>Animaciones CSS avanzadas</span>
+              </div>
+              <div class="feature">
+                <i class="fas fa-check"></i>
+                <span>Diseño editorial único</span>
+              </div>
+              <div class="feature">
+                <i class="fas fa-check"></i>
+                <span>Formulario con EmailJS</span>
+              </div>
+            </div>
+            <div class="project-tags">
+              <span class="tag">Design</span>
+              <span class="tag">Animations</span>
+              <span class="tag">Performance</span>
+              <span class="tag">Creative</span>
+            </div>
+            <a href="#contacto" class="project-link">
+              <span>Crear el Tuyo</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+          <div class="project-image">
+            <img
+              src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&h=600&fit=crop"
+              alt="Portfolio Interactivo"
+              loading="lazy"
+            />
+            <div class="project-overlay">
+              <div class="overlay-icon">
+                <i class="fas fa-palette"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA Banner -->
+      <div class="projects-cta reveal">
+        <div class="cta-content">
+          <h3>¿Listo para crear algo increíble?</h3>
+          <p>Cada proyecto es único. Hablemos de tu visión.</p>
+          <a href="#contacto" class="btn-primary">
+            <span>Comenzar Ahora</span>
+            <i class="fas fa-rocket"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills reveal" id="habilidades">
+      <div class="section-header">
+        <h2 class="section-title">STACK TECNOLÓGICO</h2>
+        <div class="section-number">03</div>
+      </div>
+      <p class="section-subtitle">
+        Las herramientas que domino para crear experiencias excepcionales.
+      </p>
+
+      <div class="skills-container">
+        <div class="skills-grid">
+          <div class="skill-category">
+            <div class="category-icon">
+              <i class="fas fa-code"></i>
+            </div>
+            <h3>Frontend Development</h3>
+            <p class="category-description">
+              Creación de interfaces modernas y responsivas
+            </p>
+            <ul class="skill-list">
+              <li>
+                <span class="skill-name">HTML5 Semántico</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="95"></div>
+                </div>
+              </li>
+              <li>
+                <span class="skill-name">CSS3 & Animaciones</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="90"></div>
+                </div>
+              </li>
+              <li>
+                <span class="skill-name">JavaScript ES6+</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="85"></div>
+                </div>
+              </li>
+              <li>
+                <span class="skill-name">Responsive Design</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="95"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="skill-category">
+            <div class="category-icon">
+              <i class="fas fa-palette"></i>
+            </div>
+            <h3>Diseño & UX/UI</h3>
+            <p class="category-description">
+              Diseño centrado en el usuario y conversión
+            </p>
+            <ul class="skill-list">
+              <li>
+                <span class="skill-name">UI/UX Design</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="88"></div>
+                </div>
+              </li>
+              <li>
+                <span class="skill-name">Prototipado</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="82"></div>
+                </div>
+              </li>
+              <li>
+                <span class="skill-name">Design Systems</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="80"></div>
+                </div>
+              </li>
+              <li>
+                <span class="skill-name">Tipografía & Color</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="90"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="skill-category">
+            <div class="category-icon">
+              <i class="fas fa-server"></i>
+            </div>
+            <h3>Backend & Database</h3>
+            <p class="category-description">
+              Desarrollo de aplicaciones completas y robustas
+            </p>
+            <ul class="skill-list">
+              <li>
+                <span class="skill-name">PHP & MySQL</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="85"></div>
+                </div>
+              </li>
+              <li>
+                <span class="skill-name">Node.js</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="75"></div>
+                </div>
+              </li>
+              <li>
+                <span class="skill-name">API Integration</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="80"></div>
+                </div>
+              </li>
+              <li>
+                <span class="skill-name">Java</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="78"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact reveal" id="contacto">
+      <div class="contact-container">
+        <div class="contact-header">
+          <h2>CONSTRUYAMOS ALGO JUNTOS</h2>
+          <p>
+            ¿Tienes un proyecto en mente? Me encantaría escucharlo. Respondo
+            todos los mensajes en menos de 24 horas.
+          </p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <div class="contact-intro">
+              <h3>Información de Contacto</h3>
+              <p>
+                Prefiero trabajar en colaboración cercana con mis clientes. Ya
+                sea un proyecto grande o pequeño, estoy aquí para ayudarte.
+              </p>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-details">
+                <div class="contact-label">Email</div>
+                <div class="contact-value">
+                  <a href="mailto:javierramos.04@outlook.com"
+                    >javierramos.04@outlook.com</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="contact-details">
+                <div class="contact-label">Ubicación</div>
+                <div class="contact-value">
+                  San Cristóbal de las Casas, Chiapas, México
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-clock"></i>
+              </div>
+              <div class="contact-details">
+                <div class="contact-label">Disponibilidad</div>
+                <div class="contact-value">
+                  Lun — Dom, 9:00 AM — 7:30 PM (GMT-6)
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-share-alt"></i>
+              </div>
+              <div class="contact-details">
+                <div class="contact-label">Sígueme en</div>
+                <div class="social-links">
+                  <a
+                    href="#"
+                    class="social-link"
+                    aria-label="TikTok"
+                    title="TikTok"
+                  >
+                    <i class="fab fa-tiktok"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="social-link"
+                    aria-label="Facebook"
+                    title="Facebook"
+                  >
+                    <i class="fab fa-facebook"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="social-link"
+                    aria-label="LinkedIn"
+                    title="LinkedIn"
+                  >
+                    <i class="fab fa-linkedin"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="social-link"
+                    aria-label="GitHub"
+                    title="GitHub"
+                  >
+                    <i class="fab fa-github"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <form class="contact-form" id="contactForm">
+            <div class="form-header">
+              <h3>Envíame un Mensaje</h3>
+              <p>
+                Completa el formulario y me pondré en contacto contigo pronto
+              </p>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">
+                  <i class="fas fa-user"></i>
+                  Nombre Completo
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Ej: Juan Pérez"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="email">
+                  <i class="fas fa-envelope"></i>
+                  Correo Electrónico
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="tu@email.com"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="subject">
+                <i class="fas fa-tag"></i>
+                Asunto
+              </label>
+              <select id="subject" name="subject" required>
+                <option value="">Selecciona un tipo de proyecto</option>
+                <option value="landing-page">Landing Page</option>
+                <option value="website">Sitio Web Completo</option>
+                <option value="ecommerce">E-commerce</option>
+                <option value="redesign">Rediseño de Sitio</option>
+                <option value="maintenance">Mantenimiento</option>
+                <option value="other">Otro</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">
+                <i class="fas fa-comment-dots"></i>
+                Cuéntame sobre tu proyecto
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Describe tu proyecto, objetivos, timeline, etc."
+                required
+              ></textarea>
+              <div class="char-counter">
+                <span id="charCount">0</span> / 1000 caracteres
+              </div>
+            </div>
+
+            <button type="submit" class="submit-btn" id="submitBtn">
+              <span class="btn-text">Enviar Mensaje</span>
+              <span class="btn-loading">
+                <i class="fas fa-spinner fa-spin"></i>
+                Enviando...
+              </span>
+              <span class="btn-success">
+                <i class="fas fa-check"></i>
+                ¡Enviado!
+              </span>
+            </button>
+
+            <div class="form-status" id="formStatus"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-brand">
+          <div class="footer-logo">JaviDev<span>.</span>Lab</div>
+          <p class="footer-tagline">
+            Creando experiencias digitales que importan.<br />
+            Un proyecto a la vez.
+          </p>
+          <div class="footer-social">
+            <a href="#" class="footer-social-link" aria-label="TikTok">
+              <i class="fab fa-tiktok"></i>
+            </a>
+            <a href="#" class="footer-social-link" aria-label="Facebook">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a href="#" class="footer-social-link" aria-label="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="#" class="footer-social-link" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-links-group">
+          <div class="footer-section">
+            <h4>Navegación</h4>
+            <a href="#inicio">Inicio</a>
+            <a href="#sobre-mi">Sobre Mí</a>
+            <a href="#proyectos">Proyectos</a>
+            <a href="#habilidades">Habilidades</a>
+          </div>
+
+          <div class="footer-section">
+            <h4>Servicios</h4>
+            <a href="#contacto">Landing Pages</a>
+            <a href="#contacto">Sitios Web</a>
+            <a href="#contacto">E-commerce</a>
+            <a href="#contacto">Mantenimiento</a>
+          </div>
+
+          <div class="footer-section">
+            <h4>Contacto</h4>
+            <a href="mailto:javierramos.04@outlook.com">Email</a>
+            <a href="#contacto">Formulario</a>
+            <a href="#contacto">Cotización</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-bottom-content">
+          <p>&copy; 2026 JaviDevLab. Todos los derechos reservados.</p>
+          <p class="footer-credits">
+            Diseñado y desarrollado con <i class="fas fa-heart"></i> y mucho
+            <i class="fas fa-coffee"></i>
+          </p>
+        </div>
+        <button id="backToTop" class="back-to-top" aria-label="Volver arriba">
+          <i class="fas fa-arrow-up"></i>
+        </button>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
