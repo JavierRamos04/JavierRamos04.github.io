@@ -522,16 +522,18 @@ if (contactForm) {
     try {
       // OPCIÓN 1: Usar EmailJS (Recomendado)
       // Descomentar estas líneas cuando configures EmailJS
-      /*
-      await emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
+      
+      await emailjs.send('service_o47s98n', 'template_nj9v283', {
         from_name: name,
         from_email: email,
         subject: subject,
         message: message
       });
-      */
+      
 
       // OPCIÓN 2: Usar mailto (Funcional pero limitado)
+
+      /*
       const emailSubject = encodeURIComponent(
         `[${subject}] Nuevo mensaje de ${name}`,
       );
@@ -541,8 +543,10 @@ if (contactForm) {
           `Tipo de Proyecto: ${subject}\n\n` +
           `Mensaje:\n${message}`,
       );
-
+      
       window.location.href = `mailto:javierramos.04@outlook.com?subject=${emailSubject}&body=${emailBody}`;
+
+      */
 
       // Show success message
       setTimeout(() => {
