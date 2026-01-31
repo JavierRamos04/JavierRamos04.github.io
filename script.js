@@ -100,7 +100,7 @@ class ImageCarousel {
     this.indicatorsContainer = element.querySelector(".carousel-indicators");
     this.currentIndex = 0;
     this.interval = null;
-    this.intervalTime = 4000; // 4 segundos
+    this.intervalTime = 2500; // 2.5 segundos
     this.touchStartX = 0;
     this.touchEndX = 0;
 
