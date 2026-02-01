@@ -519,17 +519,46 @@ if (contactForm) {
     submitBtn.classList.add("loading");
     submitBtn.disabled = true;
 
+    // Mostrar mensaje de carga
+    showFormStatus("Enviando mensaje...", "loading");
+
     try {
       // OPCIÓN 1: Usar EmailJS (Recomendado)
-      // Descomentar estas líneas cuando configures EmailJS
-      
-      await emailjs.send('service_o47s98n', 'template_nj9v283', {
+
+      //await emailjs.send('service_o47s98n', 'template_nj9v283', {
+      /*
+      await emailjs.send("service_o47s98n", "template_e8r1plp", {
         from_name: name,
         from_email: email,
         subject: subject,
-        message: message
+        message: message,
       });
-      
+      */
+
+      const response = await emailjs.send(
+        "service_o47s98n",
+        "template_e8r1plp",
+        {
+          from_name: name,
+          from_email: email,
+          subject: subject,
+          message: message,
+        },
+      );
+
+      console.log(
+        "✅ Email enviado exitosamente:",
+        response.status,
+        response.text,
+      );
+
+      // Show success message
+      submitBtn.classList.remove("loading");
+      submitBtn.classList.add("success");
+      showFormStatus(
+        "¡Mensaje enviado exitosamente! Te responderé pronto.",
+        "success",
+      );
 
       // OPCIÓN 2: Usar mailto (Funcional pero limitado)
 
@@ -549,6 +578,7 @@ if (contactForm) {
       */
 
       // Show success message
+      /*
       setTimeout(() => {
         submitBtn.classList.remove("loading");
         submitBtn.classList.add("success");
@@ -556,6 +586,9 @@ if (contactForm) {
           "¡Mensaje enviado exitosamente! Te responderé pronto.",
           "success",
         );
+        
+
+
 
         // Reset form
         setTimeout(() => {
@@ -566,14 +599,28 @@ if (contactForm) {
           formStatus.style.display = "none";
         }, 3000);
       }, 1000);
+      */
+
+      // Reset form
+      setTimeout(() => {
+        contactForm.reset();
+        if (charCount) charCount.textContent = "0";
+        submitBtn.classList.remove("success");
+        submitBtn.disabled = false;
+        formStatus.style.display = "none";
+      }, 3000);
+
     } catch (error) {
       console.error("Error:", error);
       submitBtn.classList.remove("loading");
       submitBtn.disabled = false;
-      showFormStatus(
-        "Hubo un error al enviar el mensaje. Por favor intenta de nuevo.",
-        "error",
-      );
+      let errorMessage = "Hubo un error al enviar el mensaje. Por favor intenta de nuevo.";
+      
+      if (error.text) {
+        errorMessage += ` (${error.text})`;
+      }
+      
+      showFormStatus(errorMessage, "error");
     }
   });
 }
@@ -582,7 +629,7 @@ function showFormStatus(message, type) {
   if (!formStatus) return;
 
   formStatus.textContent = message;
-  formStatus.className = `form-status ${type}`;
+  formStatus.className = `form-status-premium ${type}`;
   formStatus.style.display = "block";
 
   if (type === "error") {
@@ -593,8 +640,9 @@ function showFormStatus(message, type) {
 }
 
 function isValidEmail(email) {
+  // Regex más permisivo y estándar
   const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return re.test(email);
+  return re.test(email) && email.length <= 254;
 }
 
 // ===========================
